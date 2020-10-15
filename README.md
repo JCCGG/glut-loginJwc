@@ -10,7 +10,7 @@ public byte[] getCheckCode()
 
 public boolean checkedCode(String code)
 
-| 参数 |                  |
+| 参数 |         描述     |
 | ---- | ---------------- |
 | code | 需要检查的验证码 |
 
