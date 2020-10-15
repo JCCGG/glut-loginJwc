@@ -1,20 +1,24 @@
-# glut-loginJwc
-桂林理工大学教务处客户端（JAVA）
 # 桂林理工大学教务处客户端
 
 实验功能：获取登录验证码、检查验证码、登录教务处、查成绩、查课程表、查考试安排、简单学籍信息
 
 #### 登录验证码
 
-getCheckCode（）
+public byte[] getCheckCode()
 
 #### 检查验证码
 
-checkedCode（）
+public boolean checkedCode(String code)
+
+| 参数 |                  |
+| ---- | ---------------- |
+| code | 需要检查的验证码 |
+
+
 
 #### 登录
 
-loginCheck(String code, String username, String password)
+public boolean loginCheck(String code, String username, String password)
 
 | 参数     | 类型   | 描述                         |
 | -------- | ------ | ---------------------------- |
@@ -22,11 +26,9 @@ loginCheck(String code, String username, String password)
 | username | String | 教务账号                     |
 | password | String | 教务密码                     |
 
-
-
 #### 查询成绩
 
-getStudentScore(String year, String term)
+public ArrayList<StudentScore> getStudentScore(String year, String term)
 
 | 参数 | 类型   | 描述                   |
 | ---- | ------ | ---------------------- |
@@ -37,7 +39,7 @@ getStudentScore(String year, String term)
 
 #### 查询课程表
 
-getStudentCurrentCourse(String year, String term)
+public ArrayList<StudentCourse> getStudentCurrentCourse(String year, String term) 
 
 | 参数 | 类型   | 描述                   |
 | ---- | ------ | ---------------------- |
@@ -46,9 +48,8 @@ getStudentCurrentCourse(String year, String term)
 
 #### 查询考试安排
 
-getStudentAllExam（）
+public ArrayList<StudentExam> getStudentAllExam()
 
 #### 查询基本学籍信息
 
-getStudentInfo（）
-
+public StudentInfo getStudentInfo() 
